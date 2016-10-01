@@ -24,6 +24,9 @@ require 'rspec'
 # us the index of where to put the next interger) and the index of the location
 # we're checking. This is a perfect example of a slow-pointer and a
 # fast-pointer.
+#
+# Tag:
+# Two pointer technique
 
 # @param {Integer[]} nums
 # Returns {Integer}

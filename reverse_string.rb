@@ -18,6 +18,8 @@ require 'rspec'
 # If we were to be strict, simply having an index to a length n array requires
 # O(log n) bits. However, pointer sizes are often considered to be constants.
 #
+# Tag:
+# Two pointer technique
 
 # Time complexity: O(n)
 # Space complexity: O(1)

@@ -22,6 +22,9 @@ require 'rspec'
 #
 # This approach would fail when we introduce negative numbers into our test
 # case.  For example: {-99, 0, 100} target 1
+#
+# Tag:
+# Two pointer technique
 
 
 # Time complexity O(n)
