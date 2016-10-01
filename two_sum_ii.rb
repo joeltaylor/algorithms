@@ -16,16 +16,25 @@ require 'rspec'
 #
 # Notes:
 # The interesting bits here are that we have an array sorted in ascending order.
-# The only indicies we're interested in are those that come before the first
-# value that is greater than or equal to the target.
+# Originally, I thought I could approach this problem by using a binary search
+# to find the index of first number before another number that is bigger than
+# the target.
+#
+# This approach would fail when we introduce negative numbers into our test
+# case.  For example: {-99, 0, 100} target 1
 
+
+# Time complexity O(n)
+# Space complexity O(1)
 def two_sum(numbers, target)
+  return numbers if numbers.empty? || numbers.length < 2
+
   first_pointer, last_pointer = 0, numbers.size - 1
 
-  while true
+  while first_pointer < last_pointer
     sum = numbers[first_pointer] + numbers[last_pointer]
     if sum == target
-      return [first_pointer + 1, last_pointer + 1]
+      return first_pointer + 1, last_pointer + 1
     elsif sum < target
       first_pointer += 1
     else
