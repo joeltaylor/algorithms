@@ -17,7 +17,7 @@ require 'minitest/autorun'
 # @param {String} haystack
 # @param {String} needle
 # @return {Integer}
-# Time complexity: O(n)
+# Time complexity: O(n*m)
 # Space complexity: O(1)
 def str_str(haystack, needle)
     return 0 if needle.empty?
